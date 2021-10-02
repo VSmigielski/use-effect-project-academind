@@ -55,6 +55,10 @@ const Login = (props) => {
     };
   }, []);
 
+  const getEmailData = (e) => {
+    setEmail(e.target.value)
+  }
+
   // Object destructuring alias assignment
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = passwordState;
@@ -129,7 +133,8 @@ const Login = (props) => {
         onBlur={validatePasswordHandler}/>
         
         <div className={classes.actions}>
-          <Button type="submit" className={classes.btn} >
+          <Button type="submit" 
+          className={classes.btn} >
             Login
           </Button>
         </div>
