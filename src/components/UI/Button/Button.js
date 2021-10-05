@@ -1,10 +1,12 @@
-import React from 'react';
-
 import classes from './Button.module.css';
 
-const Button = (props) => {
+function Button(props) {
   return (
-    <button
+    <>
+    <React.Fragment>
+      
+    </React.Fragment>
+      <button
       type={props.type || 'button'}
       className={`${classes.button} 
       ${props.className}`}
@@ -13,7 +15,17 @@ const Button = (props) => {
     >
       {props.children}
     </button>
+    <button>
+
+    </button>
+    <Hello/>
+    </>
+    
   );
 };
+
+const Hello = () => {
+  return <h1>Hello</h1>
+}
 
 export default Button;
